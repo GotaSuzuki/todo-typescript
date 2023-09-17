@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { Todo } from "../types/todo";
 import { v4 as uuidv4 } from "uuid";
+import { useRecoilState } from "recoil";
+import { incompleteTodoState } from "../store/incompleteTodoState";
 
-interface IncompleteTodoProps {
-  setIncompleteTodo: (todo: Todo[]) => void;
-  incompleteTodo: Todo[];
-}
-
-const InputTodo: React.FC<IncompleteTodoProps> = ({
-  setIncompleteTodo,
-  incompleteTodo
-}) => {
+const InputTodo = () => {
   const [todoText, setTodoText] = useState("");
+  const [incompleteTodo, setIncompleteTodo] =
+    useRecoilState<Todo[]>(incompleteTodoState);
 
   const handleAdd = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
