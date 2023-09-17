@@ -26,7 +26,12 @@ function App() {
         completeTodo={completeTodo}
         setCompleteTodo={setCompleteTodo}
       />
-      <CompleteTodo completeTodo={completeTodo} />
+      <CompleteTodo
+        incompleteTodo={incompleteTodo}
+        setIncompleteTodo={setIncompleteTodo}
+        completeTodo={completeTodo}
+        setCompleteTodo={setCompleteTodo}
+      />
     </div>
   );
 }
