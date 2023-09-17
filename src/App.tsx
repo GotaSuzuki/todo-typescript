@@ -10,14 +10,18 @@ function App() {
     { todo: "aaa", id: "1" },
     { todo: "bbb", id: "2" }
   ]);
-  const [ccompleteTodo, setCompleteTodo] = useState<Todo[]>([
+  const [completeTodo, setCompleteTodo] = useState<Todo[]>([
     { todo: "ddd", id: "3" }
   ]);
+
   return (
     <div className="App">
-      <InputTodo />
+      <InputTodo
+        incompleteTodo={incompleteTodo}
+        setIncompleteTodo={setIncompleteTodo}
+      />
       <IncompleteTodo incompleteTodo={incompleteTodo} />
-      <CompleteTodo completeTodo={ccompleteTodo} />
+      <CompleteTodo completeTodo={completeTodo} />
     </div>
   );
 }

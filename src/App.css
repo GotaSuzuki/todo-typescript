@@ -32,6 +32,11 @@ li {
   border-radius: 8px;
   padding: 8px;
   margin: 8px;
+  display: flex;
+}
+
+.input-area form {
+  margin-right: 20px;
 }
 
 .incomplete-area {
