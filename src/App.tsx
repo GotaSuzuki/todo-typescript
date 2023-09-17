@@ -20,7 +20,12 @@ function App() {
         incompleteTodo={incompleteTodo}
         setIncompleteTodo={setIncompleteTodo}
       />
-      <IncompleteTodo incompleteTodo={incompleteTodo} />
+      <IncompleteTodo
+        incompleteTodo={incompleteTodo}
+        setIncompleteTodo={setIncompleteTodo}
+        completeTodo={completeTodo}
+        setCompleteTodo={setCompleteTodo}
+      />
       <CompleteTodo completeTodo={completeTodo} />
     </div>
   );
